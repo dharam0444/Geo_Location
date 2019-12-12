@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User timezone</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container text-center">
+    <h1 class="text-center m-2 p-2 text-info" >User Time Zone</h1>
+         <h5>Your public IP Address is <%= public_ip %></h5>
+         <h5 class="text-success">Your Geolocation Details</h5>
+         <table class="table text-center text-dark border">
+             <tbody class="table-border">
+                 <tr><td>Public IP Addres</td><td><%= public_ip %></td></tr>
+                 <tr><td>Country Code</td><td><%= geo.country %></td></tr>
+                 <tr><td>Region</td><td><%= geo.region %></td></tr>  
+                 <tr><td>Timezone</td><td><%= geo.timezone %></td></tr>  
+                 <tr><td>City</td><td><%= geo.city %></td></tr>  
+                 <tr><td>latitude</td><td><%= geo.ll[0] %></td></tr>  
+                 <tr><td>longitude</td><td><%= geo.ll[1] %></td></tr> 
+                 <tr><td>Date And Time</td><td><%= India_time %></td></tr>  
+            </tbody>
+     </table>   
+    </div>
+  </body>
+</html>
